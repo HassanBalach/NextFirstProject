@@ -12,7 +12,7 @@ export default function Header({ className }: { className?: string }) {
     return (
         <div className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}>
             <Menu setActive={setActive}>
-                <Link href={"#"}>
+                <Link href={"/"}>
                     <MenuItem setActive={setActive} active={active} item="Homepage">
 
                         <div className="flex flex-col space-y-4 text-sm">
@@ -22,8 +22,8 @@ export default function Header({ className }: { className?: string }) {
                     </MenuItem>
                 </Link>
 
-
-                <MenuItem setActive={setActive} active={active} item="About Me">
+                <Link href={"/courses"}>
+                <MenuItem setActive={setActive} active={active} item="Courses">
                     <div className="flex flex-col space-y-4 text-sm">
                         <HoveredLink href="/myself">MySelf</HoveredLink>
                         <HoveredLink href="/mybackground">MyBackground</HoveredLink>
@@ -31,8 +31,12 @@ export default function Header({ className }: { className?: string }) {
                         <HoveredLink href="/resume">Resume</HoveredLink>
                     </div>
                 </MenuItem>
-                <MenuItem setActive={setActive} active={active} item="Projects">
-                </MenuItem>
+                </Link>
+               
+                <Link href={"/contact"}>
+                    <MenuItem setActive={setActive} active={active} item="Contact">
+                    </MenuItem>
+                </Link>
             </Menu>
 
         </div>

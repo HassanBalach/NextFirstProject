@@ -5,6 +5,7 @@ import WhyChooseUS from "./components/WhyChooseUS";
 import MovingCards from "./components/MovingCards";
 import CardHoverEffect from "./components/CardHoverEffect";
 import WavyBackgroundDemo from "./components/WavyBackgroundDemo";
+import Footer from "./components/Footer";
 
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <MovingCards />
         <CardHoverEffect />
         <WavyBackgroundDemo />
+        <Footer />
         
       </div>
     </>
